@@ -2,7 +2,6 @@
 
 import ImageComponent from '@/components/image'
 import { ProductType } from '@/interfaces'
-import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
 const ShoppingCard = () => {
