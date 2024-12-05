@@ -6,7 +6,6 @@ import React, { useEffect, useState } from 'react'
 
 const ShoppingCard = () => {
     const [products, setProducts] = useState<ProductType[]>([])
-    const [total, setTotal] = useState<number>(0)
 
     useEffect(() => {
         const savedCart = localStorage.getItem('carts');
@@ -14,14 +13,6 @@ const ShoppingCard = () => {
             setProducts(JSON.parse(savedCart));
         }
     }, []);
-
-    useEffect(() => {
-        const total = products.reduce((acc: number, item: ProductType) => {
-            return acc + item.price * (item.quantity ?? 0);
-        }, 0);
-
-        setTotal(total);
-    }, [products]);
 
     const removeCart = (id: number) => {
         const updatedData = products.filter((product) => product.id !== id);
