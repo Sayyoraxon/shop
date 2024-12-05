@@ -3,8 +3,8 @@
 import ImageComponent from '@/components/image';
 import { ProductType } from '@/interfaces';
 import { Dialog } from '@headlessui/react';
-import { StarIcon as StarIconOutline } from '@heroicons/react/24/outline';
-import { StarIcon } from '@heroicons/react/24/solid';
+// import { StarIcon as StarIconOutline } from '@heroicons/react/24/outline';
+// import { StarIcon } from '@heroicons/react/24/solid';
 import { useParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import ReactStars from 'react-stars';
